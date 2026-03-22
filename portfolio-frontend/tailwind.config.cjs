@@ -7,8 +7,8 @@ module.exports = {
         secondary: "#1B2A41",
       },
       fontFamily: {
-        heading: ["Poppins", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        heading: ["Inter", "sans-serif"],
+        body: ["Lato", "sans-serif"],
       },
       spacing: {
         128: "32rem",
