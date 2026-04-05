@@ -1,18 +1,31 @@
 export default function ContactForm(){
+    const Pill = ({ width, margin }) => (
+        <div className={`${width} h-1 bg-[#324A5F] ${margin} rounded-full`} />
+    );
+    
     return(
         <section className="px-10 py-16">
             <div className="grid md:grid-cols-2 rounded-xl overflow-hidden">
-                <div className="bg-[#0b1722] p-10">
+                <div className="bg-[#0b1722] p-20">
                     <h2 className="text-2xl font-heading font-bold mb-6">
-                    I look forward to hearing from you!
+                    I look forward to hearing <br/> from you!
                     </h2>
 
-                    <p className="font-heading font-semibold text-sm text-gray-400 mb-4">I am currently open to:</p>
+                    <p className="font-heading font-semibold text-sm text-gray-400 mt-10 mb-4">I am currently open to:</p>
 
-                    <ul className="font-heading font-semibold space-y-3 text-sm">
-                    <li>— JUNIOR DEVELOPER ROLES</li>
-                    <li>— FREELANCE OPPORTUNITIES</li>
-                    <li>— COLLABORATIVE PROJECTS</li>
+                    <ul className="font-heading font-semibold space-y-3 text-gray-300 text-l mt-10 tracking-wider">
+                    <div className="flex items-center">
+                        <Pill width="w-7" margin="ml-2 mr-2" />
+                        <li>JUNIOR DEVELOPER ROLES</li>
+                    </div>
+                    <div className="flex items-center">
+                        <Pill width="w-7" margin="ml-2 mr-2" />
+                        <li>FREELANCE OPPORTUNITIES</li>
+                    </div>
+                    <div className="flex items-center">
+                        <Pill width="w-7" margin="ml-2 mr-2" />
+                        <li>COLLABORATIVE PROJECTS</li>
+                    </div>
                     </ul>
                 </div>
 
