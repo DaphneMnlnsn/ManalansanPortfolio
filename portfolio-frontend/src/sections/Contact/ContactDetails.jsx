@@ -16,26 +16,26 @@ export default function ContactDetails(){
                 <p className="font-heading font-semibold text-sm text-gray-400 pl-10 mb-10">— CONTACT DETAILS</p>
 
                 <div className="font-heading grid md:grid-cols-4 gap-20 text-center pl-10 pr-10">
-                    <div>
-                        <div className="text-3xl mb-2"><FontAwesomeIcon icon={faGithub} className="w-8 h-8" /></div>
+                    <div className="group">
+                        <div className="text-3xl mb-2"><FontAwesomeIcon icon={faGithub} className="w-8 h-8 text-gray-300 group-hover:text-[#324a5f] transition-colors duration-300" /></div>
                         <p className="font-semibold text-xs text-gray-400">GITHUB</p>
                         <p className="font-bold mt-2 text-sm">github.com/DaphneMnlnsn</p>
                     </div>
 
-                    <div>
-                        <div className="text-3xl mb-2"><FontAwesomeIcon icon={faEnvelope} className="w-7 h-7" /></div>
+                    <div className="group">
+                        <div className="text-3xl mb-2"><FontAwesomeIcon icon={faEnvelope} className="w-7 h-7 text-gray-300 group-hover:text-[#324a5f] transition-colors duration-300" /></div>
                         <p className="font-semibold text-xs text-gray-400">EMAIL</p>
                         <p className="font-bold mt-2 text-sm">daphnemanalansan1213@gmail.com</p>
                     </div>
 
-                    <div>
-                        <div className="text-3xl mb-2"><FontAwesomeIcon icon={faPhone} className="w-6 h-6" /></div>
+                    <div className="group">
+                        <div className="text-3xl mb-2"><FontAwesomeIcon icon={faPhone} className="w-6 h-6 text-gray-300 group-hover:text-[#324a5f] transition-colors duration-300" /></div>
                         <p className="font-semibold text-xs text-gray-400">PHONE</p>
                         <p className="font-bold mt-2 text-sm">+63 956 624 5046</p>
                     </div>
 
-                    <div>
-                        <div className="text-3xl mb-2"><FontAwesomeIcon icon={faLinkedin} className="w-8 h-8" /></div>
+                    <div className="group">
+                        <div className="text-3xl mb-2"><FontAwesomeIcon icon={faLinkedin} className="w-8 h-8 text-gray-300 group-hover:text-[#324a5f] transition-colors duration-300" /></div>
                         <p className="font-semibold text-xs text-gray-400">LINKEDIN</p>
                         <p className="font-bold mt-2 text-sm">linkedin.com/in/daphne-manalansan</p>
                     </div>
