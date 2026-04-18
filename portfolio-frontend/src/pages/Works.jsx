@@ -105,19 +105,20 @@ export default function Works() {
                 <div
                     className={`grid md:grid-cols-2 gap-10 items-center ${index % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""}`}
                 >
-                    <div className="project-slider relative py-5 overflow-hidden"> 
+                    <div className="project-slider relative py-5 px-[8%] overflow-hidden"> 
                         <Slider {...settings}>
                             {proj.projectScreenshots.map((ss, idx) => (
                                 <div key={idx} className="px-4 outline-none">
                                     <div className={`${proj.cardBg} p-8 rounded-2xl text-justify flex flex-col items-center transition-all duration-500 slide-inner min-h-[350px] w-[350px]`}>
                                         <h3 className="text-l font-heading tracking-wider font-semibold mb-1 text-gray-300">{ss.title}</h3>
                                         <p className="text-[10px] tracking-wider font-semibold font-heading text-gray-400 mb-6 uppercase">{ss.subtitle}</p>
-                                        
-                                        <div className="w-64 max-h-40 overflow-hidden mb-6 rounded-lg">
+
+                                        <div className={`mb-6 rounded-lg flex items-center justify-center ${ss.isMobile ? "w-40 h-72 bg-black" : "w-64 max-h-40 overflow-hidden"}`}>
                                             <center><img src={ss.img} alt={ss.title} className="w-full h-full object-cover object-top" /></center>
                                         </div>
 
-                                        <p className="text-xs text-gray-300 font-body font-medium max-w-xs leading-relaxed">{ss.desc}</p>
+                                        <p className="text-xs text-gray-400 mb-4 font-heading font-bold tracking-widest uppercase">{ss.subtitle}</p>
+                                        <p className="text-sm text-gray-300 font-body font-medium max-w-xs leading-relaxed">{ss.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -125,17 +126,17 @@ export default function Works() {
                     </div>
 
                     <div className="ml-10">
-                    <p className="font-heading font-semibold text-xs text-gray-400 mb-2">— {proj.header}</p>
-                    <h2 className="text-2xl font-heading font-bold mb-2">{proj.title}</h2>
-                    <p className="font-heading font-semibold text-xs text-gray-400 mb-3">
+                    <p className="font-heading font-semibold text-sm text-gray-400 mb-2">— {proj.header}</p>
+                    <h2 className="text-3xl font-heading font-bold mb-2">{proj.title}</h2>
+                    <p className="font-heading font-semibold text-sm text-gray-400 mb-3">
                         {proj.subtitle}
                     </p>
-                    <p className="font-body font-medium text-xs text-gray-300 mb-4 whitespace-pre-wrap">{proj.desc}</p>
-                    <p className="font-heading font-semibold text-xs text-gray-400 mb-2">— TECH STACK</p>
-                    <p className="font-heading font-extrabold text-xs mb-6">{proj.tech}</p>
-                    <p className="font-heading font-semibold text-xs text-gray-400">— KEY FEATURES</p>
-                    <p className="font-body font-medium text-xs text-gray-300 mb-4 whitespace-pre-wrap">{proj.features}</p>
-                    <Link to="/works" className="group relative font-heading font-semibold mt-2 text-sm hover:text-gray-300 
+                    <p className="font-body font-medium text-sm text-gray-300 mb-4 whitespace-pre-wrap">{proj.desc}</p>
+                    <p className="font-heading font-semibold text-sm text-gray-400 mb-2">— TECH STACK</p>
+                    <p className="font-heading font-extrabold text-sm mb-6">{proj.tech}</p>
+                    <p className="font-heading font-semibold text-sm text-gray-400">— KEY FEATURES</p>
+                    <p className="font-body font-medium text-sm text-gray-300 mb-4 whitespace-pre-wrap">{proj.features}</p>
+                    <Link to={proj.link} target="_blank" className="group relative font-heading font-semibold mt-2 text-m hover:text-gray-300 
                         after:content-[''] after:absolute after:left-0 after:bottom-0 
                         after:w-0 after:h-[2px] after:bg-gray-300 
                         after:transition-all after:duration-300 

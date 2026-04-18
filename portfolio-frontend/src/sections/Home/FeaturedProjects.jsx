@@ -75,7 +75,7 @@ export default function FeaturedProjects(){
                     </Link>
                 </div>
 
-                <div className="project-slider relative py-5 overflow-hidden"> 
+                <div className="project-slider relative px-[8%] py-5 overflow-hidden"> 
                     <Slider {...settings}>
                         {projectScreenshots.map((proj, idx) => (
                             <div key={idx} className="px-4 outline-none">
