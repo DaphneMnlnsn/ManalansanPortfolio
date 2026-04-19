@@ -1,9 +1,58 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 
 export default function ContactForm() {
     const Pill = ({ width, margin }) => (
         <div className={`${width} h-1 bg-[#324A5F] ${margin} rounded-full`} />
     );
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+    });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs.send(
+            "service_816er5f",
+            "template_7ga3w1s",
+            formData,
+            "uQYJPQtHbHb2EGdbj"
+        )
+        .then(() => {
+            Swal.fire({
+                title: "Message Sent!",
+                text: "Thanks for reaching out — I’ll get back to you soon <3",
+                icon: "success",
+                confirmButtonColor: "#3b82f6",
+                background: "#162535",
+                color: "#fff"
+            });
+            setFormData({ name: "", email: "", subject: "", message: "" });
+        })
+        .catch(() => {
+            Swal.fire({
+                title: "Oops!",
+                text: "Something went wrong. Please try again.",
+                icon: "error",
+                confirmButtonColor: "#ef4444",
+                background: "#162535",
+                color: "#fff"
+            });
+        });
+    };
 
     return (
         <motion.section
@@ -35,7 +84,7 @@ export default function ContactForm() {
                     </div>
 
                     <div className="bg-[#162535] p-12">
-                        <form className="space-y-6">
+                        <form className="space-y-6" onSubmit={handleSubmit}>
 
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
@@ -45,6 +94,9 @@ export default function ContactForm() {
                                     <input
                                         type="text"
                                         placeholder="John Doe"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
                                         className="w-full bg-[#0f1e2d] border border-transparent focus:border-[#3b82f6] rounded-lg p-3 outline-none transition"
                                     />
                                 </div>
@@ -56,6 +108,9 @@ export default function ContactForm() {
                                     <input
                                         type="email"
                                         placeholder="john.doe@gmail.com"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
                                         className="w-full bg-[#0f1e2d] border border-transparent focus:border-[#3b82f6] rounded-lg p-3 outline-none transition"
                                     />
                                 </div>
@@ -68,6 +123,9 @@ export default function ContactForm() {
                                 <input
                                     type="text"
                                     placeholder="Let's work together!"
+                                    name="subject"
+                                    value={formData.subject}
+                                    onChange={handleChange}
                                     className="w-full bg-[#0f1e2d] border border-transparent focus:border-[#3b82f6] rounded-lg p-3 outline-none transition"
                                 />
                             </div>
@@ -79,12 +137,15 @@ export default function ContactForm() {
                                 <textarea
                                     rows="4"
                                     placeholder="Tell me about your project..."
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     className="w-full bg-[#0f1e2d] border border-transparent focus:border-[#3b82f6] rounded-lg p-3 outline-none transition resize-none"
                                 ></textarea>
                             </div>
 
                             <div className="flex justify-end">
-                                <button className="bg-[#0b1722] px-6 py-3 rounded-lg font-semibold hover:bg-[#0f1e2d] transition shadow-md">
+                                <button className="bg-[#0b1722] px-6 py-3 rounded-lg font-semibold hover:bg-[#0f1e2d] transition shadow-md" type="submit">
                                     Send Message
                                 </button>
                             </div>

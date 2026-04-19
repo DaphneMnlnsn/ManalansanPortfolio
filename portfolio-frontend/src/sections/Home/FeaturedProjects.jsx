@@ -10,7 +10,7 @@ const Slider = SlickSlider.default || SlickSlider;
 
 export default function FeaturedProjects(){
     const projectScreenshots = [
-        { img: "src/assets/cater_ui/landing.jpg", title: "CaterXperience", subtitle: "CAPSTONE PROJECT", tech: "REACT | LARAVEL | MYSQL", desc: "CaterXperience is a project my team and I developed during college. It is a catering operations and 2D venue layout platform developed to cater to a real client’s needs." },
+        { img: "src/assets/cater_ui/landing.png", title: "CaterXperience", subtitle: "CAPSTONE PROJECT", tech: "REACT | LARAVEL | MYSQL", desc: "CaterXperience is a project my team and I developed during college. It is a catering operations and 2D venue layout platform developed to cater to a real client’s needs." },
         { img: "src/assets/cater_ui/dashboard.jpg", tech: "DASHBOARD", desc: "The main dashboard provides an overview of ongoing events, bookings, and system notifications for efficient catering management." },
         { img: "src/assets/cater_ui/bookings.jpg", tech: "BOOKINGS", desc: "The bookings page allows staff to manage customer reservations, view details, and track upcoming events seamlessly." },
         { img: "src/assets/cater_ui/event.jpg", tech: "EVENT DETAILS", desc: "This screen displays detailed event information, including schedules, assigned staff, and venue setup plans." },
