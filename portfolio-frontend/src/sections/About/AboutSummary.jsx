@@ -12,11 +12,10 @@ export default function AboutSummary(){
             <section className="bg-[#0b1722] px-10 py-16 grid md:grid-cols-2 gap-10 items-center">
                 <div className="pl-10">
                     <p className="font-semibold font-heading text-sm text-gray-400 mb-2">— SUMMARY</p>
-                    <h2 className="text-2xl font-heading font-bold mb-4">Web Developer</h2>
+                    <h2 className="text-2xl font-heading font-bold mb-4">Software Engineer</h2>
                     <p className="font-body font-medium text-gray-400 text-sm mb-4">
-                        I am a backend-focused web developer with experience in building web
-                        applications from frontend interfaces to backend systems and
-                        database architecture.
+                        I am a software engineer with a focus on backend development and experience 
+                        building full-stack web applications, APIs, and database architecture.
                     </p>
                     <p className="font-body font-medium text-gray-400 text-sm mb-4">
                         I focus on creating clean, scalable, and maintainable solutions.

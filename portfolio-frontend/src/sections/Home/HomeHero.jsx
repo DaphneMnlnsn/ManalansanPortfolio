@@ -53,11 +53,11 @@ export default function Home(){
                 <div className="flex-1 ml-[20%]">
                     <p className="font-heading font-semibold text-sm text-gray-400 mb-2">— INTRODUCTION</p>
                     <h2 className="text-3xl font-heading font-bold mb-4">
-                        Website Developer, <br /> based in Bulacan.
+                        Software Engineer, <br /> based in Bulacan.
                     </h2>
                     <p className="font-body font-medium text-gray-300 text-sm leading-relaxed text-justify mb-4">
-                        Hi! I am Daphne Manalansan, a websitedeveloper based in <br/>Bulacan, Philippines.
-                        I mostly work on React, Laravel, and<br/>ASP.Net web-based projects.
+                        Hi! I am Daphne Manalansan, a software engineer based in <br/>Bulacan, Philippines.
+                        I build full-stack web applications, <br />backend systems, and APIs using React, Laravel, and ASP.NET.
                     </p>
                     <Link to="/about" className="group relative font-heading font-semibold mt-2 text-sm hover:text-gray-300 
                         after:content-[''] after:absolute after:left-0 after:bottom-0 

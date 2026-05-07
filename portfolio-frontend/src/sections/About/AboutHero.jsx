@@ -42,13 +42,14 @@ export default function AboutHero(){
 
             <div className="text-gray-300 pl-20 font-medium font-body text-l leading-relaxed tracking-wide space-y-4">
                 <p>
-                    Hi! I'm Daphne Manalansan, a web developer<br/>based in Bulacan,
-                    Philippines. I enjoy building<br/>systems that solve real-world
+                    Hi! I'm Daphne Manalansan, a software engineer<br/>based in Bulacan,
+                    Philippines. I enjoy building<br/>systems that solve real business
                     problems and<br/>improve workflows.
                 </p>
                 <p>
                     I specialize in full-stack development using<br/>modern frameworks such
-                    as<br/>React, Laravel, and ASP.NET.
+                    as<br/>React, Laravel, and ASP.NET, but I mainly work on <br/> backend development.
+                    I have experience in building web <br/> applications, RESTful APIs, and integrating third-party services.
                 </p>
             </div>
         </motion.section>
