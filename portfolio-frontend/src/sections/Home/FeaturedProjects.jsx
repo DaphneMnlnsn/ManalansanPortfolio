@@ -10,16 +10,16 @@ const Slider = SlickSlider.default || SlickSlider;
 
 export default function FeaturedProjects(){
     const projectScreenshots = [
-        { img: "src/assets/cater_ui/landing.png", title: "CaterXperience", subtitle: "CAPSTONE PROJECT", tech: "REACT | LARAVEL | MYSQL", desc: "CaterXperience is a project my team and I developed during college. It is a catering operations and 2D venue layout platform developed to cater to a real client’s needs." },
-        { img: "src/assets/cater_ui/dashboard.jpg", tech: "DASHBOARD", desc: "The main dashboard provides an overview of ongoing events, bookings, and system notifications for efficient catering management." },
-        { img: "src/assets/cater_ui/bookings.jpg", tech: "BOOKINGS", desc: "The bookings page allows staff to manage customer reservations, view details, and track upcoming events seamlessly." },
-        { img: "src/assets/cater_ui/event.jpg", tech: "EVENT DETAILS", desc: "This screen displays detailed event information, including schedules, assigned staff, and venue setup plans." },
-        { img: "src/assets/cater_ui/menu.jpg", tech: "MENU", desc: "The menu section lets users view and manage food options, including their categorie and pictures." },
-        { img: "src/assets/cater_ui/packages.jpg", tech: "PACKAGES", desc: "Here, catering packages are showcased, allowing clients to select predefined combinations of services, themes, and addons." },
-        { img: "src/assets/cater_ui/client.jpg", tech: "CLIENT MANAGEMENT", desc: "The client management interface keeps track of customer profiles, contact information, and booking history." },
-        { img: "src/assets/cater_ui/staff.jpg", tech: "STAFFF MANAGEMENT", desc: "This page shows the staff roster, their roles, and schedules, making team management more organized." },
-        { img: "src/assets/cater_ui/layout.jpg", tech: "2D VENUE LAYOUT", desc: "The 2D venue layout planner allows users to design seating arrangements and event setups visually." },
-        { img: "src/assets/cater_ui/audit.jpg", tech: "AUDIT LOG", desc: "The audit log records system activity and changes, helping maintain accountability and track actions." },
+        { img: "/assets/cater_ui/landing.png", title: "CaterXperience", subtitle: "CAPSTONE PROJECT", tech: "REACT | LARAVEL | MYSQL", desc: "CaterXperience is a project my team and I developed during college. It is a catering operations and 2D venue layout platform developed to cater to a real client’s needs." },
+        { img: "/assets/cater_ui/dashboard.jpg", tech: "DASHBOARD", desc: "The main dashboard provides an overview of ongoing events, bookings, and system notifications for efficient catering management." },
+        { img: "/assets/cater_ui/bookings.jpg", tech: "BOOKINGS", desc: "The bookings page allows staff to manage customer reservations, view details, and track upcoming events seamlessly." },
+        { img: "/assets/cater_ui/event.jpg", tech: "EVENT DETAILS", desc: "This screen displays detailed event information, including schedules, assigned staff, and venue setup plans." },
+        { img: "/assets/cater_ui/menu.jpg", tech: "MENU", desc: "The menu section lets users view and manage food options, including their categorie and pictures." },
+        { img: "/assets/cater_ui/packages.jpg", tech: "PACKAGES", desc: "Here, catering packages are showcased, allowing clients to select predefined combinations of services, themes, and addons." },
+        { img: "/assets/cater_ui/client.jpg", tech: "CLIENT MANAGEMENT", desc: "The client management interface keeps track of customer profiles, contact information, and booking history." },
+        { img: "/assets/cater_ui/staff.jpg", tech: "STAFFF MANAGEMENT", desc: "This page shows the staff roster, their roles, and schedules, making team management more organized." },
+        { img: "/assets/cater_ui/layout.jpg", tech: "2D VENUE LAYOUT", desc: "The 2D venue layout planner allows users to design seating arrangements and event setups visually." },
+        { img: "/assets/cater_ui/audit.jpg", tech: "AUDIT LOG", desc: "The audit log records system activity and changes, helping maintain accountability and track actions." },
     ];
 
     const NextArrow = ({ onClick }) => (

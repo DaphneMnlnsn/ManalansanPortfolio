@@ -44,7 +44,7 @@ export default function Home(){
 
                 {/* <div className="flex-1 flex justify-center pr-12 my-10 md:my-0">
                     <img
-                        src="src/assets/daphne.png"
+                        src="/assets/daphne.png"
                         alt="profile"
                         className="object-cover h-[22rem] mb-[-13%]"
                     />
