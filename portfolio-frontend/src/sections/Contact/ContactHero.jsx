@@ -13,31 +13,15 @@ export default function ContactHero(){
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="px-10 py-16 grid md:grid-cols-2 gap-10"
+            viewport={{ once: false }}
+            className="bg-[#0b1722] px-10 py-16 grid md:grid-cols-2 gap-10"
+            id="contact"
         >
             <div>
                 <h1 className="text-6xl font-heading font-bold leading-tight pl-5 mb-4">
                     Contact <br /> Me
                 </h1>
                 <Pill width="w-12" margin="ml-5" />
-                <div className="flex space-x-4 mt-6 text-xl pl-5">
-                    <a href="mailto:daphnemanalansan1213@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4" />
-                    </a>
-                    <a href="https://github.com/DaphneMnlnsn"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
-                    </a>
-                    <a href="https://linkedin.com/in/daphne-manalansan"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4" />
-                    </a>
-                </div>
             </div>
 
             <div className="text-gray-300 mt-10 pl-20 font-medium font-body text-l leading-relaxed tracking-wide space-y-4">

@@ -10,9 +10,9 @@ export default function AboutOtherSkills(){
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
         >
-            <section className="bg-[#0b1722] px-10 py-16">
+            <section className="px-10 py-16">
                 <p className="font-heading font-semibold text-sm text-gray-400 mb-5 pl-10">— OTHER SKILLS</p>
 
                 <div className="grid md:grid-cols-3 gap-10 pl-10 pr-10">
@@ -25,7 +25,7 @@ export default function AboutOtherSkills(){
                             { name: "POSTMAN", icon: faPaperPlane },
                             { name: "VS CODE", icon: faCode }
                         ].map((tool) => (
-                            <div key={tool.name} className="bg-[#0f1f2e] font-heading font-semibold p-5 rounded-xl text-center group">
+                            <div key={tool.name} className="bg-[#0b1722] font-heading font-semibold p-5 rounded-xl text-center group">
                                 <div className="text-gray-300 group-hover:text-[#324a5f] transition-colors duration-300 mb-3 text-3xl">
                                     <FontAwesomeIcon icon={tool.icon} />
                                 </div>
@@ -51,7 +51,7 @@ export default function AboutOtherSkills(){
                             { name: "EMPATHY", icon: faHeart },
                             { name: "WILLING TO LEARN", icon: faLightbulb }
                         ].map((skill) => (
-                            <div key={skill.name} className="bg-[#0f1f2e] font-heading font-semibold p-5 rounded-xl text-center group">
+                            <div key={skill.name} className="bg-[#0b1722] font-heading font-semibold p-5 rounded-xl text-center group">
                                 <div className="text-gray-300 group-hover:text-[#324a5f] transition-colors duration-300 mb-3 text-3xl">
                                     <FontAwesomeIcon icon={skill.icon} />
                                 </div>

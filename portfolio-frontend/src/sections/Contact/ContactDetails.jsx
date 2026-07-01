@@ -10,9 +10,9 @@ export default function ContactDetails(){
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
         >
-            <section className="bg-[#0b1722] px-10 py-16">
+            <section className="px-10 py-16">
                 <p className="font-heading font-semibold text-sm text-gray-400 pl-10 mb-10">— CONTACT DETAILS</p>
 
                 <div className="font-heading grid md:grid-cols-4 gap-20 text-center pl-10 pr-10">

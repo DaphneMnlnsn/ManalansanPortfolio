@@ -20,7 +20,7 @@ export default function HomeSkills(){
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
         >
             <section className="bg-[#0b1722] px-10 py-16 grid md:grid-cols-2 gap-10">
                 <div className="grid grid-cols-3 gap-y-10 gap-x-6 text-center">

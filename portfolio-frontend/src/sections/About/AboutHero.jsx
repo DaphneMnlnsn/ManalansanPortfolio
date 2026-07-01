@@ -13,7 +13,7 @@ export default function AboutHero(){
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="px-10 py-16 grid md:grid-cols-2 gap-10"
         >
             <div>

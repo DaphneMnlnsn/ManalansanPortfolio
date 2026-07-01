@@ -10,9 +10,9 @@ export default function AboutCoreSkills(){
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
         >
-            <section className="px-10 py-16">
+            <section className="px-10 py-16 bg-[#0b1722]">
                 <p className="font-heading font-semibold text-sm text-gray-400 mb-5 pl-10">— CORE SKILLS</p>
 
                 <div className="grid md:grid-cols-3 text-center pl-10 pr-20">
@@ -55,7 +55,7 @@ export default function AboutCoreSkills(){
 
                         <div className="grid grid-cols-2 gap-5 p-5">
                             {group.items.map((item) => (
-                            <div key={item.name} className="bg-[#0b1722] font-heading font-semibold p-5 rounded-xl group">
+                            <div key={item.name} className="bg-[#0f1f2e] font-heading font-semibold p-5 rounded-xl group">
                                 <div className="text-gray-300 group-hover:text-[#324a5f] transition-colors duration-300 mb-3 text-3xl">
                                     <FontAwesomeIcon icon={item.icon} />
                                 </div>

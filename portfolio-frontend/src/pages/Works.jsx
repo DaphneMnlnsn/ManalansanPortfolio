@@ -1,16 +1,17 @@
-import React from "react"
+import { React, useState, useEffect } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { faArrowCircleLeft, faArrowCircleRight, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import SlickSlider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { projects } from "../workData";
+import ProjectImageSlider from "../components/ProjectImageSlider";
 
 const Slider = SlickSlider.default || SlickSlider;
 
@@ -44,14 +45,13 @@ const settings = {
 
 export default function Works() {
   return (
-    <div className="bg-[#0f1f2e] text-white min-h-screen">
-      <Navbar />
+    <div className="text-white min-h-screen" id="works">
 
       <motion.section
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="px-10 py-16 grid md:grid-cols-2 gap-10"
         >
             <div>
@@ -59,23 +59,6 @@ export default function Works() {
                     Projects/<br />Works
                 </h1>
                 <Pill width="w-12" margin="ml-5" />
-                <div className="flex space-x-4 mt-6 text-xl pl-5">
-                    <a href="mailto:daphnemanalansan1213@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4" />
-                    </a>
-                    <a href="https://github.com/DaphneMnlnsn"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
-                    </a>
-                    <a href="https://linkedin.com/in/daphne-manalansan"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4" />
-                    </a>
-                </div>
             </div>
 
             <div className="text-gray-300 pl-20 font-medium font-body text-l leading-relaxed tracking-wide space-y-4">
@@ -96,7 +79,7 @@ export default function Works() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
             >
                 <div
                 key={proj.title}
@@ -106,23 +89,9 @@ export default function Works() {
                     className={`grid md:grid-cols-2 gap-10 items-center ${index % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""}`}
                 >
                     <div className="project-slider relative py-5 px-[8%] overflow-hidden"> 
-                        <Slider {...settings}>
-                            {proj.projectScreenshots.map((ss, idx) => (
-                                <div key={idx} className="px-4 outline-none">
-                                    <div className={`${proj.cardBg} p-8 rounded-2xl text-justify flex flex-col items-center transition-all duration-500 slide-inner min-h-[350px] w-[350px]`}>
-                                        <h3 className="text-l font-heading tracking-wider font-semibold mb-1 text-gray-300">{ss.title}</h3>
-                                        <p className="text-[10px] tracking-wider font-semibold font-heading text-gray-400 mb-6 uppercase">{ss.subtitle}</p>
-
-                                        <div className={`mb-6 rounded-lg flex items-center justify-center ${ss.isMobile ? "w-40 h-72 bg-black" : "w-64 max-h-40 overflow-hidden"}`}>
-                                            <center><img src={ss.img} alt={ss.title} className="w-full h-full object-cover object-top" /></center>
-                                        </div>
-
-                                        <p className="text-xs text-gray-400 mb-4 font-heading font-bold tracking-widest uppercase">{ss.subtitle}</p>
-                                        <p className="text-sm text-gray-300 font-body font-medium max-w-xs leading-relaxed">{ss.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </Slider>
+                        <ProjectImageSlider
+                            images={proj.projectScreenshots}
+                        />
                     </div>
 
                     <div className="ml-10">
@@ -149,48 +118,6 @@ export default function Works() {
             </motion.section>
             ))}
         </section>
-
-        <motion.section
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-        >
-            <section className="bg-[#0b1722] px-10 py-16 grid md:grid-cols-2 gap-10">
-            
-                <div className="ml-10">
-                <h2 className="text-2xl font-heading font-bold mb-2">Curious?</h2>
-                <p className="text-sm font-body font-medium text-gray-400 mb-4">
-                    Find out more about me and what I can do.
-                </p>
-                <Link to="/about" className="group relative font-heading font-semibold mt-2 text-l hover:text-gray-300 
-                    after:content-[''] after:absolute after:left-0 after:bottom-0 
-                    after:w-0 after:h-[2px] after:bg-gray-300 
-                    after:transition-all after:duration-300 
-                    hover:after:w-full">
-                    More About Me <FontAwesomeIcon icon={faArrowRight} className="pl-1 w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"/>
-                </Link>
-                </div>
-
-                <div>
-                <h2 className="text-2xl font-heading font-bold mb-2">
-                    Interested in Working Together?
-                </h2>
-                <p className="text-sm font-body font-medium text-gray-400 mb-4">
-                    Want to avail my services or send me anything work-related?
-                </p>
-                <Link to="/contact" className="group relative font-heading font-semibold mt-2 text-l hover:text-gray-300 
-                    after:content-[''] after:absolute after:left-0 after:bottom-0 
-                    after:w-0 after:h-[2px] after:bg-gray-300 
-                    after:transition-all after:duration-300 
-                    hover:after:w-full">
-                    Contact Me <FontAwesomeIcon icon={faArrowRight} className="pl-1 w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"/>
-                </Link>
-                </div>
-            </section>
-        </motion.section>
-
-        <Footer />
       
     </div>
   );

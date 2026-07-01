@@ -5,6 +5,16 @@ import HomeContact from "../sections/Home/HomeContact";
 import HomeSkills from "../sections/Home/HomeSkills";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import AboutHero from "../sections/About/AboutHero";
+import AboutSummary from "../sections/About/AboutSummary";
+import AboutCoreSkills from "../sections/About/AboutCoreSkills";
+import AboutOtherSkills from "../sections/About/AboutOtherSkills";
+import AboutMoreInfo from "../sections/About/AboutMoreInfo";
+import AboutCallToAction from "../sections/About/AboutCallToAction";
+import ContactHero from "../sections/Contact/ContactHero";
+import ContactDetails from "../sections/Contact/ContactDetails";
+import ContactForm from "../sections/Contact/ContactForm";
+import Works from "./Works";
 
 export default function Home() {
   return (
@@ -12,12 +22,20 @@ export default function Home() {
       <Navbar />
 
       <HomeHero />
+                  
+      <AboutCoreSkills />
+      
+      <AboutOtherSkills />
+      
+      <AboutMoreInfo />
+      
+      <Works />
 
-      <HomeContact />
+      <ContactHero />
+      
+      <ContactDetails />
 
-      <FeaturedProjects />
-
-      <HomeSkills />
+      <ContactForm />
 
       <Footer />
       

@@ -51,7 +51,7 @@ export default function FeaturedProjects(){
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
         >
             <section className="px-10 py-14 pb-15 grid md:grid-cols-2">
                 <div className="pl-10">

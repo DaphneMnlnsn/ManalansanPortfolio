@@ -9,7 +9,7 @@ export default function HomeContact(){
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
         >
             <section className="bg-[#0b1722] px-20 py-16 grid md:grid-cols-2 gap-10">
                 <div className="max-w-xs pl-10">
